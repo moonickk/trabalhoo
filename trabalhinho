@@ -1,0 +1,39 @@
+site-de-filmes/
+├── src/
+│   ├── assets/
+│   │   ├── css/
+│   │   └── img/
+│   ├── components/
+│   ├── pages/
+│   ├── App.js
+│   └── index.js
+├── public/
+│   ├── index.html
+└── README.md
+npx create-react-app site-de-filmes
+import React from 'react';
+
+function App() {
+  return (
+    <div className="App">
+      <header>
+        <h1>Site de Filmes</h1>
+      </header>
+      <main>
+        <p>Lista de Filmes:</p>
+        {/* Aqui você pode adicionar componentes de filmes */}
+      </main>
+    </div>
+  );
+}
+
+export default App;
+npm install react-router-dom
+useEffect(() => {
+  fetch(`http://www.omdbapi.com/?apikey=${API_KEY}&s=star+wars`)
+    .then(response => response.json())
+    .then(data => setMovies(data.Search));
+}, []);
+git add .
+git commit -m "Initial commit"
+git push origin main
